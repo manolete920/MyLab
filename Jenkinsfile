@@ -73,7 +73,7 @@ pipeline{
                         sshTransfer(
                             cleanRemote: false,
                             execCommand: 'ansible-playbook /opt/playbooks/downloadanddeploy_as_tomcat_user.yaml -i /opt/playbooks/hosts',
-                            execTimeout: 120000
+                            execTimeout: 180000
                         )                      
                     ], 
                     usePromotionTimestamp: false, 
@@ -93,7 +93,7 @@ pipeline{
                         sshTransfer(
                             cleanRemote: false,
                             execCommand: 'ansible-playbook /opt/playbooks/downloadanddeploy_docker.yaml -i /opt/playbooks/hosts',
-                            execTimeout: 120000
+                            execTimeout: 300000
                         )                      
                     ], 
                     usePromotionTimestamp: false, 
